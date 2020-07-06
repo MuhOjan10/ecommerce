@@ -31,7 +31,7 @@
                 <a href="#" class="navbar-nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown">
                     <img src="{{asset('images/placeholders/placeholder.jpg')}}" class="rounded-circle mr-2" height="34"
                         alt="">
-                    <span>Victoria</span>
+                    <span>User</span>
                 </a>
 
                 <div class="dropdown-menu dropdown-menu-right">
