@@ -74,6 +74,13 @@
                                     Customer
                                 </span></a>
                         </li>
+                        <li class="nav-item">
+                            <a href="{{route('category.index')}}" class="nav-link">
+                                <i class="icon-user-check"></i>
+                                <span>
+                                    Kategori
+                                </span></a>
+                        </li>
                     </ul>
                 </li>
                 <!-- /main -->

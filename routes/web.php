@@ -24,3 +24,13 @@ Route::prefix('customer')->group(function(){
     Route::post('/update/{id}', 'CustomerController@update')->name('customer.update');
     Route::get('/delete/{id}', 'CustomerController@delete')->name('customer.delete');
 });
+
+Route::prefix('category')->group(function(){
+    Route::get('/', 'CategoryController@index')->name('category.index');
+    Route::get('/create', 'CategoryController@create')->name('category.create');
+    Route::post('/store', 'CategoryController@store')->name('category.store');
+    Route::get('/view/{id}', 'CategoryController@view')->name('category.view');
+    Route::get('/edit/{id}', 'CategoryController@edit')->name('category.edit');
+    Route::post('/update/{id}', 'CategoryController@update')->name('category.update');
+    Route::get('/delete/{id}', 'CategoryController@delete')->name('category.delete');
+});
