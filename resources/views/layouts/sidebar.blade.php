@@ -81,6 +81,13 @@
                                     Kategori
                                 </span></a>
                         </li>
+                        <li class="nav-item">
+                            <a href="{{route('product.index')}}" class="nav-link">
+                                <i class="icon-user-check"></i>
+                                <span>
+                                    Produk
+                                </span></a>
+                        </li>
                     </ul>
                 </li>
                 <!-- /main -->
