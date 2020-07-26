@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('homepage');
 });
 
+Route::get('interface', 'DashboardUserController@index');
+
 Route::prefix('customer')->group(function(){
     Route::get('/', 'CustomerController@index')->name('customer.index');
     Route::get('/create', 'CustomerController@create')->name('customer.create');

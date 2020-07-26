@@ -1,0 +1,73 @@
+* {
+    font-family: 'Raleway',
+        sans-serif;
+}
+
+.navbar {
+    min-height: 65px;
+}
+
+.navbar h1 {
+    color: #000064;
+}
+
+#navbarNav a {
+    color: #000064;
+}
+
+.bg-blue {
+    background-color: #FFD500;
+}
+
+.container-fluid {
+    background-color: #FFD500;
+}
+
+.container p {
+    color: black;
+}
+
+.carousel-caption {
+    top: 100px;
+}
+
+.carousel-caption h2 {
+    font-size: 60pt;
+    color: black;
+}
+
+.carousel-caption p {
+    font-size: 12pt;
+    color: black;
+}
+
+.product {
+    width: 100%;
+    height: auto;
+}
+
+.product h1 {
+    color: #000064;
+}
+
+.owl-carousel .card {
+    border: 1px solid black;
+}
+
+@media screen and (max-width:680px) {
+    .product {
+        width: 100%;
+        height: auto;
+    }
+
+    .product h1 {
+        color: #000064;
+    }
+
+    .product h4,
+    p {
+        display: none;
+    }
+
+
+}
