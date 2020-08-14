@@ -27,7 +27,7 @@
                     </div>
 
                     <div class="media-body">
-                        <div class="media-title font-weight-semibold">User</div>
+                        <div class="media-title font-weight-semibold">{{auth()->user()->name}}</div>
                         <div class="font-size-xs opacity-50">
                             <i class="icon-pin font-size-sm"></i> &nbsp;Indeonesia, JKT
                         </div>
@@ -86,6 +86,37 @@
                                 <i class="icon-user-check"></i>
                                 <span>
                                     Produk
+                                </span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item-header">
+                    <div class="text-uppercase font-size-xs line-height-xs">Option</div> <i class="icon-menu"
+                        title="Main"></i>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link"><i class="icon-copy"></i> <span>Option</span></a>
+
+                    <ul class="nav nav-group-sub" data-submenu-title="Layouts">
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <i class="icon-user-check"></i>
+                                <span>
+                                    Permissions
+                                </span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <i class="icon-user-check"></i>
+                                <span>
+                                    Roles
+                                </span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('user.index')}}" class="nav-link">
+                                <i class="icon-user-check"></i>
+                                <span>
+                                    User
                                 </span></a>
                         </li>
                     </ul>

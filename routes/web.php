@@ -21,6 +21,16 @@ Route::middleware('auth:web')->group(function () {
 
     Route::get('/', 'HomeController@index')->name('home');
 
+    Route::prefix('user')->group(function () {
+        Route::get('/', 'UserController@index')->name('user.index');
+        Route::get('/create', 'UserController@create')->name('user.create');
+        Route::post('/store', 'UserController@store')->name('user.store');
+        Route::get('/view/{id}', 'UserController@view')->name('user.view');
+        Route::get('/edit/{id}', 'UserController@edit')->name('user.edit');
+        Route::post('/update/{id}', 'UserController@update')->name('user.update');
+        Route::get('/delete/{id}', 'UserController@delete')->name('user.delete');
+    });
+
     Route::prefix('customer')->group(function () {
         Route::get('/', 'CustomerController@index')->name('customer.index');
         Route::get('/create', 'CustomerController@create')->name('customer.create');
