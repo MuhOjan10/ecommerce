@@ -31,7 +31,7 @@
                 <a href="#" class="navbar-nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown">
                     <img src="{{asset('images/placeholders/placeholder.jpg')}}" class="rounded-circle mr-2" height="34"
                         alt="">
-                    <span>User</span>
+                    <span>{{ Auth::user()->name }}</span>
                 </a>
 
                 <div class="dropdown-menu dropdown-menu-right">
@@ -41,7 +41,13 @@
                             class="badge badge-pill bg-blue ml-auto">58</span></a>
                     <div class="dropdown-divider"></div>
                     <a href="#" class="dropdown-item"><i class="icon-cog5"></i> Account settings</a>
-                    <a href="#" class="dropdown-item"><i class="icon-switch2"></i> Logout</a>
+                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
                 </div>
             </li>
         </ul>
