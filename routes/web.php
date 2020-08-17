@@ -13,13 +13,13 @@
 
 
 
-Route::get('interface', 'DashboardUserController@index');
+Route::get('/', 'DashboardUserController@index')->name('dashboardCustomer');
 
 Auth::routes();
 
 Route::middleware('auth:web')->group(function () {
 
-    Route::get('/', 'HomeController@index')->name('home');
+    // Route::get('/', 'HomeController@index')->name('home');
 
     Route::prefix('user')->group(function () {
         Route::get('/', 'UserController@index')->name('user.index');

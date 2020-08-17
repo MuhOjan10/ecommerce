@@ -11,6 +11,6 @@ class DashboardUserController extends Controller
     {
         $category = Category::get();
         $data['category'] = $category;
-        return view('interface.dashboard.index1', $data);
+        return view('interface.dashboard.index', $data);
     }
 }
