@@ -31,6 +31,26 @@ Route::middleware('auth:web')->group(function () {
         Route::get('/delete/{id}', 'UserController@delete')->name('user.delete');
     });
 
+    Route::prefix('role')->group(function () {
+        Route::get('/', 'RoleController@index')->name('role.index');
+        Route::get('/create', 'RoleController@create')->name('role.create');
+        Route::post('/store', 'RoleController@store')->name('role.store');
+        Route::get('/view/{id}', 'RoleController@view')->name('role.view');
+        Route::get('/edit/{id}', 'RoleController@edit')->name('role.edit');
+        Route::post('/update/{id}', 'RoleController@update')->name('role.update');
+        Route::get('/delete/{id}', 'RoleController@delete')->name('role.delete');
+    });
+
+    Route::prefix('permission')->group(function () {
+        Route::get('/', 'PermissionController@index')->name('permission.index');
+        Route::get('/create', 'PermissionController@create')->name('permission.create');
+        Route::post('/store', 'PermissionController@store')->name('permission.store');
+        Route::get('/view/{id}', 'PermissionController@view')->name('permission.view');
+        Route::get('/edit/{id}', 'PermissionController@edit')->name('permission.edit');
+        Route::post('/update/{id}', 'PermissionController@update')->name('permission.update');
+        Route::get('/delete/{id}', 'PermissionController@delete')->name('permission.delete');
+    });
+
     Route::prefix('customer')->group(function () {
         Route::get('/', 'CustomerController@index')->name('customer.index');
         Route::get('/create', 'CustomerController@create')->name('customer.create');
