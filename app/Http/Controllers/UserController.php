@@ -35,6 +35,15 @@ class UserController extends Controller
         return redirect()->route('user.index');
     }
 
+    public function view($id)
+    {
+        $user = User::find($id);
+        $pageTitle = 'User';
+        $data['user'] = $user;
+        $data['pageTitle'] = $pageTitle;
+        return view('user.view', $data);
+    }
+
     public function edit($id)
     {
         $user = User::find($id);
