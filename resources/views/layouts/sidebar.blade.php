@@ -99,14 +99,14 @@
 
                     <ul class="nav nav-group-sub" data-submenu-title="Layouts">
                         <li class="nav-item">
-                            <a href="" class="nav-link">
+                            <a href="{{route('permission.index')}}" class="nav-link">
                                 <i class="icon-user-check"></i>
                                 <span>
                                     Permissions
                                 </span></a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">
+                            <a href="{{route('role.index')}}" class="nav-link">
                                 <i class="icon-user-check"></i>
                                 <span>
                                     Roles
